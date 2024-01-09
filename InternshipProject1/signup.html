@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>New User SignUp Here!</title>
+	   <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SignUp & Login By Nagarjuna </title>
+     <title>SignUp & Login By Nagarjuna </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Yatra+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Yatra+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Big+Shoulders+Stencil+Text:wght@100&display=swap" rel="stylesheet">
+
+	<style>
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            background: mintcream;
+
+        }
+   .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            z-index: 999; /* Ensure the overlay is behind the popup */
+        }
+         .overlay-success {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            z-index: 999; /* Ensure the overlay is behind the popup */
+        }
+
+
+        /* Popup Styles */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px; /* Increase width */
+            height: 500px; /* Increase height */
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* Slightly transparent */
+            border: 1px solid firebrick;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+            text-align: center;
+            color: black;
+            font-family: "Yatra One", sans-serif;
+            z-index: 1000; /* Ensure the popup is on top of other content */
+        }
+
+        .popup-header {
+            background: firebrick;
+            color: white;
+            padding: 10px;
+            border-bottom: 1px solid firebrick;
+        }
+
+        .popup-content {
+            margin-top: 20px;
+        }
+
+        .popup-buttons {
+            margin-top: 20px;
+        }
+
+        .accept-button, .cancel-button
+         {
+            background-color: fireblack;
+            color: maroon;
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border: solid maroon 2px;
+            border-radius: 5px;
+        }
+        /* Nav bar Css */
+        /* Nav bar Css */
+        .navbar {
+            color: darkgrey;
+            background-color: firebrick;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(57, 31, 186, 0.6);
+            
+        }
+
+      .home {
+           
+            font-size: 30px;
+            color: gold;
+            font-weight: bold;
+        }
+
+        .home:hover
+        {
+            font-size: 30px;
+            color:white;
+        }
+
+            .option1,.option2
+            {
+                color:gold;
+                text-decoration: none;
+                float: right;
+                font-size: 25px;
+                margin-right: 50px;
+                font-family: 'Anton', sans-serif;
+             }
+
+             .option1:hover
+             {
+                color: white;
+             }
+
+             .option2
+             {
+                background: gold;
+                color: maroon;
+                border: 2px maroon solid;
+                padding: 3px;
+                margin-top: -5px;
+             }
+
+        .abt {
+            background-color: firebrick;
+            padding: 50px;
+        }
+           .about-section {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71); /* Colorful gradient background */
+            color: #fff;
+            border-radius: 15px;
+        }
+.groove-text
+{
+            font-size: 45px;
+            font-weight: bold;
+            color: #ccc8c8;
+            margin-top: 10px;
+            text-align: center;
+            padding: 10px;
+            font-family: "Yatra One", sans-serif;
+            background: linear-gradient(to right, firebrick, maroon);
+            -webkit-background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 6px rgba(235, 82, 82, 0.5);
+}
+
+/*form css*/
+.form-outline
+
+{  
+     border-radius: 10px;
+    border: 5px solid firebrick;
+    margin-left:475px;
+    margin-right:475px;
+    padding-top: 15px;
+    padding-bottom:15px; 
+    background:linear-gradient(mintcream,whitesmoke); 
+    box-shadow: 0 4px 8px rgba(115, 128, 183, 0.5);   
+    background-color: rgba(0,205,0, 0.1);
+}
+
+        input[type=text]
+        {
+            height: 25px;
+            width: 120px;
+            border-radius: 8px;
+        }
+
+        input[type=password]
+        {
+            height: 25px;
+             width: 120px;
+            border-radius: 8px;
+        }
+       
+        input::placeholder
+       {
+         color:maroon;
+       }
+    .Namefield
+    {
+    margin-left: 10px;
+    }
+/*form end*/
+    h1 {
+            font-size: 2em;
+            color: dodgerblue;
+        }
+
+    p {
+            font-size: 13px;
+            color: darkred;
+            text-align: justify;
+        }
+
+   .welcome-container 
+   {
+            position: relative;
+            text-align: center;
+            height: 100vh; /* Adjust the height as needed */
+            overflow: hidden;
+    }
+    
+    .scroll-btn {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: lightgreen;
+                color: black;
+                text-decoration: none;
+                font-size: 1em;
+                border-radius: 5px;
+                margin-top: 20px;
+                transition: background-color 0.3s ease;
+                cursor: pointer;
+            }
+
+        .scroll-btn:hover {
+            background-color: dodgerblue;
+        }
+
+
+
+        .facebook
+        {
+             margin-left: 550px; text-align: center; font-size: 25px; color: gold;
+        }
+        .instagram,.Email,.linkedin,.telegram
+        {
+            margin-left: 35px; text-align: center; font-size: 25px; color: gold;
+        }
+
+.wave-text
+{
+    font-size: 30px;
+    margin-left: 300px;
+}
+
+.footer
+{
+    color: white; 
+    margin-top: -10px;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+
+
+    @media screen and (max-width: 600px) {
+        /* Add styles for mobile screens here */
+
+        body {
+            font-size: 14px; /* Adjust font size for better readability on small screens */
+        }
+
+        .navbar {
+            padding: 15px; /* Adjust padding for the navbar on small screens */
+        }
+
+        .home {
+            font-size: 30px; /* Adjust font size for the home icon on small screens */
+        }
+
+        .option1, .option2 {
+            font-size: 18px; /* Adjust font size for navigation options on small screens */
+        }
+
+        .groove-text {
+            font-size: 30px; /* Adjust font size for the heading on small screens */
+        }
+
+
+        .form-outline {
+            width: 95%; /* Adjust width for the form outline on small screens */
+            margin-left: 5px;
+
+            
+        }
+
+        .popup-container {
+         width: 90%; /* Adjust width for the popup on small screens */
+         height: 70%; /* Allow height to adjust based on content */
+        }
+
+
+        .welcome-container {
+            height: auto; /* Adjust height for the welcome container on small screens */
+        }
+
+        .scroll-btn {
+            margin-top: 10px; /* Adjust margin for the scroll button on small screens */
+
+        }
+
+  .mobile-hide-label {
+            display: none;
+        }
+
+
+    .mobfn,
+    .mobmn,
+    .mobln {
+        width: calc(50% - 10px);
+        margin: 5px;
+    }
+
+    .gender-section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+ 
+    /* Additional styles for phone and gender section */
+        input[type="text"] {
+            width: 95%; /* Make text input full width on small screens */
+            height: 30px;
+            margin-bottom: 10px; /* Add spacing between phone and gender section */
+        }
+
+        .gender-section {
+            flex-wrap: wrap; /* Allow radio buttons to wrap to the next line if needed */
+        }
+
+        .gender-section input {
+            width: auto; /* Reset width for radio buttons */
+            margin-right: 5px; /* Add spacing between radio buttons */
+        }
+
+          .gender-section label {
+            width: 100%; /* Make gender label full width on small screens */
+            margin-top: 5px; /* Add spacing between gender label and radio buttons */
+        }
+
+
+   /* Adjust styles for phone label and input element */
+        .form-section label[for="phone"] {
+            width: calc(50% - 10px);
+            margin: 5px;
+        }
+
+        .form-section input[name="phone"] {
+            width: calc(50% - 10px);
+            margin: 5px;
+        }
+
+        /* Adjust styles for dob label and date element */
+        .form-section label[for="dob"] {
+            width: calc(50% - 10px);
+            margin: 5px;
+        }
+
+        .form-section input[name="dob"] {
+            width: calc(50% - 10px);
+            margin: 5px;
+        }
+
+        /* Adjust styles for username label and input element */
+        .form-section label[for="username"] {
+            width: calc(50% - 10px);
+            margin: 5px;
+        }
+
+        .form-section input[name="username"] {
+            width: calc(50% - 10px);
+            margin: 5px;
+        }
+
+        /* Adjust styles for password label and input elements */
+        .form-section label[for="password"],
+        .form-section label[for="repassword"] {
+            width: calc(50% - 10px);
+            margin: 5px;
+        }
+
+        .form-section input[name="password"],
+        .form-section input[name="repassword"] {
+            width: calc(50% - 10px);
+            margin: 5px;
+        }
+
+        /* Adjust styles for signup and reset buttons */
+        .form-section input[type="submit"],
+        .form-section input[type="reset"] {
+            width: 48%; /* Adjust width based on spacing preference */
+            margin: 5px;
+        }
+
+        .form-section .phone-label,
+        .form-section .phone-input {
+            width: calc(50% - 10px);
+            margin: 5px;
+        }
+ .form-section .gender-label,
+    .form-section .password-label,
+    .form-section .repassword-label {
+        display: none;
+    }
+
+    /* Adjust styles for gender input */
+    .form-section .gender-input {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    /* Adjust styles for password and confirm password inputs */
+    .form-section .password-input,
+    .form-section .repassword-input {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+  
+    .form-section .genderlab {
+        display: none;
+    }
+
+    /* Move dob label to the next line and center date element */
+    .form-section label[for="dob"] {
+        width: 100%;
+        margin: 10px 0;
+        text-align: left;
+    }
+
+    .form-section input[name="dob"] {
+        width: 100%;
+        margin: 5px 10px;
+    }
+
+    /* Center date element */
+    .form-section input[name="dob"] {
+        width: 100%;
+        margin: 5px 0;
+        box-sizing: border-box;
+    }
+
+    /* Disable password and confirm labels */
+    .form-section .password-label,
+    .form-section .repassword-label {
+        display: none;
+    }
+
+        .form-section .dobcls {
+        width: 90%; /* Set the width as needed */
+        margin: 0 10px; /* Center the element */
+        font-size: 16px; /* Adjust the font size */
+    }
+
+    .form-section .sb {
+        width: 45%; /* Adjust width based on spacing preference */
+        margin: 5px 10px 5px 0; /* Set margin-left to 10px and no margin-right */
+        display: inline-block; /* Ensure the buttons are inline-block elements */
+    }
+
+    .form-section .rs {
+        width: 45%; /* Adjust width based on spacing preference */
+        margin: 5px 0 5px 10px; /* No margin-left and set margin-right to 10px */
+        display: inline-block; /* Ensure the buttons are inline-block elements */
+    }
+
+
+    .wave-text
+{
+    font-size: 10px;
+}
+
+.facebook
+        {
+             margin-left: 50px; text-align: center; font-size: 25px; color: gold;
+        }
+        .instagram,.Email,.linkedin,.telegram
+        {
+            margin-left: 15px; text-align: center; font-size: 25px; color: gold;
+        }
+.footer
+{
+    font-size: 15px;
+
+
+}
+
+}
+
+
+/* Tablet Screen (600px - 1024px) - Signup */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    body {
+        height: auto;
+        background: mintcream;
+    }
+
+    .navbar {
+        padding: 15px;
+        margin-right: -10px;
+        margin-left: -10px;
+        margin-top: -10px;
+        box-shadow: 0 4px 6px rgba(57, 31, 186, 0.6);
+    }
+
+    .home {
+        font-size: 30px;
+        color: gold;
+        font-weight: bold;
+    }
+
+    .home:hover {
+        font-size: 30px;
+        color: white;
+    }
+
+    
+    .option1
+    {
+        color: gold;
+    }
+    .option2 {
+        color: maroon;
+
+    }
+
+    .option1:hover {
+        color: white;
+    }
+
+    .abt {
+        background-color: firebrick;
+        padding: 25px;
+        overflow: hidden;
+        margin-left: 20px;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .groove-text {
+        font-size: 40px;
+        font-weight: bold;
+        color: #ccc8c8;
+        margin-top: 10px;
+        text-align: center;
+        padding-top: 130px;
+        font-family: "Yatra One", sans-serif;
+        background: linear-gradient(to right, firebrick, maroon);
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 0 2px 6px rgba(235, 82, 82, 0.5);
+    }
+
+    /* Form CSS */
+    .form-outline {
+        border-radius: 10px;
+        border: 5px solid firebrick;
+        margin-left: 120px;
+        margin-right: 120px;
+        padding-top: 55px;
+        padding-bottom: 15px;
+        background: linear-gradient(mintcream, whitesmoke);
+        box-shadow: 0 4px 8px rgba(115, 128, 183, 0.5);
+        background-color: rgba(0, 205, 0, 0.1);
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        height: 35px;
+        width: 120px;
+        border-radius: 8px;
+    }
+
+    input::placeholder {
+        color: maroon;
+    }
+
+    .Namefield {
+        margin-left: 10px;
+    }
+    .abt
+    {   margin-top: 0px;
+        padding: 20px;
+        margin-left: -10px;
+    }
+
+    .layer1
+    {
+         margin-top: 180px;
+        margin-left: -10px;
+    }
+.facebook
+        {
+            margin-top: -150px; margin-left: 250px; text-align: center; font-size: 25px; color: gold;
+        }
+        .instagram,.Email,.linkedin,.telegram
+        {
+            margin-left: 30px; text-align: center; font-size: 25px; color: gold;
+        }
+.footer
+{     padding: 50px;
+    font-size: 15px;
+
+
+}
+
+
+
+
+
+}
+
+
+    </style>
+</head>
+<body>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+    <!-- Popup Container -->
+<div id="popup" class="popup-container">
+    <div class="popup-header">Accept Terms and Conditions!</div>
+    <div class="popup-content">
+
+<!-- Welcome Note Begin -->
+        <div class="welcome-container">
+         
+        
+<img src="settings.png" width=" 150px" style=" margin-right: 30px; opacity: 0.9; width: ;">
+
+<p style="font-family: sans-serif;">
+<b>1. Our terms and conditions outline the rules and guidelines for using our website, ensuring a fair and secure online experience for all users.<br>
+<br>
+2. By agreeing to our terms, users acknowledge their responsibility to provide accurate information during registration and to abide by the specified rules and regulations.<br>
+<br>
+3. We emphasize the protection of intellectual property, stating that all content on the website is owned and protected by relevant intellectual property laws.<br>
+<br>
+4. The privacy and security of user information are paramount, and our terms and conditions are supplemented by a detailed Privacy Policy that explains how personal information is collected, used, and safeguarded.<b>
+<br>
+</p>
+            <div class="popup-buttons">
+            <button class="accept-button" onclick="acceptTerms()">Accept</button>
+            <button class="cancel-button" onclick="cancelRegistration()">Cancel</button>
+        </div>
+
+<!-- Overlay for Registration Success Popup -->
+<div class="overlay-success" id="overlay-success"></div>
+
+<!-- Registration Success Popup Container -->
+<div id="popup-success" class="popup-container">
+    <div class="popup-header">Congratulations!</div>
+    <div class="popup-content">
+        <p>You have successfully registered. Click the login button to proceed.</p>
+        <div class="popup-buttons">
+            <button class="login-button" onclick="goToLogin()">Login</button>
+            <button class="cancel-button" onclick="cancelSuccess()">Cancel</button>
+        </div>
+    </div>
+</div>
+        </div>
+        <!-- Welcome Note End -->
+        </div>
+    </div>
+
+   <div class="section1" id="section1">
+       
+
+        <!-- Nav Bar Start --> 
+        <div class="navbar">
+               <a class="home" href="index.html" style="margin-left: 20px; "><i class="fa fa-bars" aria-hidden="true "></i></a>
+            <a class="option1" href="login.html" >Log In</a>
+            <a class="option2" href="signup.html"><span>Sign Up</span></a>
+        </div>
+        <!-- Nav Bar End -->
+        
+   
+
+
+      <div class="groove-text">Register Here!</div>        
+  <div class="form-outline  form-section">
+       <form>
+    <section>
+
+<label style="text-align: left; margin-left: 20px; margin-top: -10px; font-family:Lobster;">Full Name<span style="color:red">*</label><br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<input type="text" class="Namefield" class="mobfn" name="firstname" id="1" placeholder="Enter Firstname" required style="margin-top:5px;"/> &nbsp;&nbsp;&nbsp;&nbsp;
+
+<input type="text" name="middlename" class="mobmn"  id="2"  placeholder="Enter Middlename" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+     
+<input type="text" name="lastname"   class="mobln" id="3"  placeholder="Enter Lastname" required/>
+
+<br>
+
+ <label  class="mobile-hide-label" style="text-align: left; margin-left: 31px; color: grey; font-family: sans-serif; font-size: 12px;">First Name<span style="color:red"></label>
+ <label  class="mobile-hide-label" style="text-align: left; margin-left: 90px; color: grey; font-family: sans-serif; font-size: 12px;">Middle Name<span style="color:red"></label>
+ <label  class="mobile-hide-label" style="text-align: left; margin-left: 75px; color: grey; font-family: sans-serif; font-size: 12px;">Last Name<span style="color:red"></label>
+
+</section><!--full name end-->
+
+<br>
+
+<label style="text-align: left; margin-left: 20px; ;font-family:Lobster;">Phone<span style="color:red">*</label>
+<label style="text-align: left; margin-left: 140px; font-family:Lobster; " class="genderlab">Gender<span style="color:red">*</label>
+
+<br>
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"  name="mail" placeholder="Enter Phone" required style="margin-top:5px; margin-left: 10px;"/> &nbsp;&nbsp;&nbsp;
+
+<!--Gender Start-->
+<input type="radio" name="Gender" value="male"  required style=" margin-left:30px; height:18px; width: 18px;margin-top:5px"/>
+<span style="font-size: 18px; font-family: sans-serif; color: dark;">Male</span>
+<input type="radio" name="Gender" value="female" required style="  height: 18px; width: 18px;margin-top:5px"/>
+<span style="font-size: 18px;font-family: sans-serif; color:dark;">Female</span>
+<input type="radio" name="Gender" value="other" required style="  height: 18px; width: 18px;margin-top:5px"/>
+<span style="font-size: 18px;font-family: sans-serif;color: dark;">Other</span>
+<!--Gender end-->
+
+<br>
+<br>
+<label style="text-align: left; margin-left: 20px; font-family:Lobster;">Email<span style="color:red">*</label>
+<label style="text-align: left; margin-left: 240px; font-family:Lobster;" class="dob-label">DOB<span style="color:red">*</label>
+
+<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" size="40" name="mail" placeholder="Enter Email" required style="margin-top:5px;  margin-left: 10px; width:200px"/> 
+&nbsp;&nbsp;&nbsp;
+
+<span style="margin-left:50px"></span><input type="date" placeholder="dob" name="Dob" class="dobcls" required style="margin-top:5px;" style="height: 18px; width: 18px;"/> 
+
+<!--phone dob end-->
+<br><br>
+
+<label style="text-align: left; margin-left: 20px; font-family:Lobster;">User Name<span style="color:red">*</label>
+<label style="text-align: left; margin-left: 72px; font-family:Lobster;" >Password<span style="color:red">*</label>
+<label style="text-align: left; margin-left: 75px; font-family:Lobster;" class="repassword-label">Confirm<span style="color:red">*</label>
+
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+
+<input type="text" name="firstname" id="1" placeholder="Enter Username" required style="margin-top:5px;"/> &nbsp;&nbsp;&nbsp;&nbsp;
+<input type="Password" name="pass"   placeholder="Enter Password" required/>
+ &nbsp;&nbsp;&nbsp;&nbsp;
+
+<input type="Password" name="repass" placeholder="Confirm Password" required/>
+
+<br><br>
+<input type="submit" value="Sign Up" onclick="showLoginPopup()" class="sb" style="margin-left: 130px; border-radius: 10px; font-size: 25px; color:forestgreen; font-family:Russo One;"/>
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<input type="reset" value="Reset" class="rs" style="margin-left:px; border-radius: 10px; font-size: 25px; color:forestgreen; font-family:Russo One;"/>
+<br><br><br>
+     <a href="login.html" style="text-decoration: none; margin-left: 26%;">Already have account! click here </a>
+</form>
+
+</div> 
+<br>
+<div class="layer1" style="background: burlywood; padding: 5px;"></div>
+<div class="layer2" style="background: brown; padding: 5px;"></div>  
+<div class="abt" id="about">
+    <p class="footer" align="center" >Copyright © 2024 Prabhuraj Nagarjuna and Contact us</p>
+<a class="facebook" ><i class="fa fa-facebook" aria-hidden="true "></i></a>
+<a class="instagram" ><i class="fa fa-instagram" aria-hidden="true "></i></a>
+<a class="Email" ><i class="fa fa-envelope" aria-hidden="true "></i></a>
+<a class="linkedin"  ><i class="fa fa-linkedin" aria-hidden="true "></i></a>
+<a class="telegram" ><i class="fa fa-telegram" aria-hidden="true "></i></a>
+</div>
+
+<script>
+// Function to show terms and conditions on page load
+    function showTermsPopup() {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('popup').style.display = 'block';
+    }
+       function showLoginPopup() {
+      document.getElementById('overlay-success').style.display = 'block';
+        document.getElementById('popup-success').style.display = 'block';
+    }
+
+
+    // Function to handle terms and conditions acceptance
+    function acceptTerms() {
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('popup').style.display = 'none';
+    }
+
+    function loginInvite()
+    {
+        // Show Registration Success Popup
+        document.getElementById('overlay-success').style.display = 'block';
+        document.getElementById('popup-success').style.display = 'block';
+    }
+
+    // Function to handle registration cancellation
+    function cancelRegistration() {
+        alert('Sorry, registration canceled.');
+        // Add code to redirect to the home page or handle cancellation
+    }
+
+    // Function to redirect to login page after successful registration
+    function goToLogin() {
+        // Add code to redirect to the login page
+        window.location.href = 'login.html';
+    }
+
+    // Show terms and conditions on page load
+    document.addEventListener('DOMContentLoaded', showTermsPopup);
+</script>
+</body>
+</html>

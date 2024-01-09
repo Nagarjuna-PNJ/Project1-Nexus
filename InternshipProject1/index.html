@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SignUp & Login By Nagarjuna </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&family=Yatra+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Yatra+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Text:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Big+Shoulders+Stencil+Text:wght@100&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            background: mintcream;    
+        }
+
+        /* Nav bar Css */
+        .navbar {
+            color: darkgrey;
+            background-color: firebrick;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(57, 31, 186, 0.6);  
+        }
+
+        .home {
+           
+            font-size: 30px;
+            color: gold;
+            font-weight: bold;
+        }
+
+        .home:hover
+        {
+            font-size: 30px;
+            color:white;
+        }
+
+       /* .option1 {
+            text-decoration: none;
+            color: brown;
+            font-size: 25px;
+            margin-right: 150px;
+            padding: 5px;
+            font-family: "Yatra One", sans-serif;
+            float: right;
+            tex
+            margin-right: 80px;
+            margin-top: 10px;
+        }
+         .option2 {
+            text-decoration: none;
+            color: brown;
+              font-size: 25px;
+            margin-right: 50px;
+            padding: 5px;
+            font-family: "Yatra One", sans-serif;
+            float: right;
+            tex
+            margin-right: 80px;
+            margin-top: 10px;
+        }*/
+
+            .option1,.option2,.option3,.option4
+            {
+                color:gold;
+                text-decoration: none;
+                float: right;
+                font-size: 25px;
+                margin-right: 50px;
+                font-family: 'Anton', sans-serif;
+             }
+
+             .option1:hover,.option2:hover,.option3:hover,.option4:hover
+             {
+                color: white;
+             }
+
+        /* Welcome Container */
+        .welcome-container {
+
+            position: relative;
+            text-align: center;
+            height: 85vh; /* Adjust the height as needed */
+            margin-top: -50px;
+        }
+
+        .background-triangles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .triangle {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 55px solid;
+            animation: moveTriangle linear infinite;
+            animation-duration: 6s;
+            animation-direction: alternate;
+            filter: blur(4px); /* Blur effect */
+        }
+
+        @keyframes moveTriangle {
+            from {
+                transform: translateX(-100vw) rotate(0deg);
+            }
+            to {
+                transform: translateX(200vw) rotate(360deg);
+            }
+        }
+
+        .theme {
+            background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71); /* Colorful gradient background */*/
+            margin-top: -100px;
+            z-index: 2;
+
+        
+        }
+
+        h1 {
+            font-size:3em;
+            color: gold;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .scroll-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: lightgreen;
+            color: black;
+            text-decoration: none;
+            font-size: 1em;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .scroll-btn:hover {
+            background-color: dodgerblue;
+        }
+
+        .image {
+            margin-top: -500px;
+            background-image: url("C:/Users/thisi/OneDrive/Desktop/Internship 2023/Project 1 - SignUpPage/Product/mountain.png");
+           
+        }
+
+        .section1 {
+            margin-top: -30px;
+            height: 630px; /* Adjust the height as needed */
+            background-color: rgba(135, 206, 250, 0.3);
+
+
+
+        }
+
+        .section2 {
+            background-image: url('man.png'); /* Replace 'your-image.png' with the path to your PNG file */
+            background-size: cover; /* Adjust the background size property as needed */
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff;
+            padding: 100px;
+            text-align: center;     
+            margin-top: -700px;
+            margin-left: -500px;
+            height: 1000px; /* Adjust the height as needed */
+        }
+
+        .abt {
+            background-color: firebrick;
+            padding: 30px;
+  
+        }
+           .about-section {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(45deg, #3498db, #e74c3c, #2ecc71); /* Colorful gradient background */
+            color: #fff;
+            border-radius: 15px;
+            margin-top:-520px; margin-left: 550px; width: 50%; height: 320px; padding-bottom: 50px;
+        }
+
+        .facebook
+        {
+             margin-left: 550px; text-align: center; font-size: 25px; color: gold;
+        }
+        .instagram,.Email,.linkedin,.telegram
+        {
+            margin-left: 35px; text-align: center; font-size: 25px; color: gold;
+        }
+
+.wave-text
+{   
+    font-size: 30px;
+}
+
+.footer
+{
+    color: white; 
+    margin-top:80px
+    
+}
+
+@media only screen and (max-width: 600px) {
+
+    body
+    {
+        background-color: mintcream;
+
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       padding: 25px;
+        box-shadow: 0 4px 6px rgba(57, 31, 186, 0.6);
+    }
+
+    .option1,
+    .option2,
+    .option3,
+    .option4 {
+        display: none;
+        color: gold;
+        text-decoration: none;
+        font-size: 25px;
+        font-family: 'Anton', sans-serif;
+    }
+
+    .home {
+        float: left;
+        font-size: 30px;
+        color: gold;
+        font-weight: bold;
+        cursor: pointer;
+
+    }
+
+    .home:hover {
+        font-size: 30px;
+        color: white;
+    }
+
+    .navbar.show-options .option1,
+    .navbar.show-options .option2,
+    .navbar.show-options .option3,
+    .navbar.show-options .option4 {
+        display: block;
+        float: none;
+        margin-right: 0;
+        font-size: 20px;
+    }
+
+    .navbar .fa-bars {
+        font-size: 30px;
+        color: gold;
+    }
+
+
+.well1
+{
+    font-size: 25px;
+}
+
+.well2
+{   
+    margin-top: 5px;
+    font-size: 5px;
+}
+
+.web1
+{
+    width: 300px;
+    }
+
+.sec2
+{
+height: 500px;
+background-image: url('man.png'); 
+}
+
+.about
+{
+ width: 10px;
+}
+
+  .about-section {
+        padding: 35px; /* Adjust padding for a smaller screen */
+        margin-left: -10px;
+        height: 300px;
+        font-size: 10px;
+        width: 250px;
+        padding-bottom: 25px;
+       
+    }
+
+    .wave-text
+{
+    font-size: 10px;
+}
+
+.facebook
+        {
+             margin-left: 50px; text-align: center; font-size: 25px; color: gold;
+        }
+        .instagram,.Email,.linkedin,.telegram
+        {
+            margin-left: 15px; text-align: center; font-size: 25px; color: gold;
+        }
+.footer
+{
+    font-size: 15px;
+    margin-top: 100px;
+
+}
+
+}/*Smartphone Media Query*/
+
+/* Tablets (600px - 1024px) */
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        background: mintcream;
+    }
+
+    .navbar {
+        color: darkgrey;
+        background-color: firebrick;
+        padding: 25px; /* Adjust padding for a smaller screen */
+        box-shadow: 0 4px 6px rgba(57, 31, 186, 0.6);
+    }
+
+    .home {
+        font-size: 25px; /* Adjust font size for a smaller screen */
+        color: gold;
+        font-weight: bold;
+    }
+
+    .home:hover {
+        font-size: 25px;
+        color: white;
+    }
+
+    .option1, .option2, .option3, .option4 {
+        font-size: 25px; /* Adjust font size for a smaller screen */
+        margin-right: 20px; /* Adjust margin for a smaller screen */
+    }
+
+    .welcome-container {
+        height: 70vh; /* Adjust the height as needed for a smaller screen */
+        margin-top: -30px; /* Adjust margin for a smaller screen */
+    }
+
+    .triangle {
+        border-left: 20px solid transparent; /* Adjust border size for a smaller screen */
+        border-right: 20px solid transparent; /* Adjust border size for a smaller screen */
+        border-bottom: 35px solid; /* Adjust border size for a smaller screen */
+        filter: blur(3px); /* Adjust blur effect for a smaller screen */
+    }
+
+    h1 {
+        font-size: 2.5em; /* Adjust font size for a smaller screen */
+    }
+
+    p {
+        font-size: 1em; /* Adjust font size for a smaller screen */
+    }
+
+    .scroll-btn {
+        font-size: 0.9em; /* Adjust font size for a smaller screen */
+    }
+
+    .section1 {
+        height: 520px; /* Adjust the height as needed for a smaller screen */
+    }
+
+    .section2 {
+        margin-top: -600px; /* Adjust margin for a smaller screen */
+        margin-left: 0; /* Adjust margin for a smaller screen */
+        height: 500px; /* Adjust the height as needed for a smaller screen */
+    }
+
+    .about-section {
+        padding: 25px; /* Adjust padding for a smaller screen */
+        margin-left: 150px;
+        height: 400px;
+        padding-bottom: 25px;
+       
+    }
+  .footer
+  {
+    font-size: 30px;
+  }
+     .facebook
+        {
+             margin-left: 280px; text-align: center; font-size: 35px; color: gold;
+        }
+        .instagram,.Email,.linkedin,.telegram
+        {
+            margin-left: 15px; text-align: center; font-size: 35px; color: gold;
+        }
+/*Tablet Screen*/
+</style>
+
+</head>
+<body>
+  
+
+        <!-- Nav Bar Start --> 
+        <div class="navbar">
+            
+            <a class="home" onclick="toggleOptions()" style="margin-left: 20px; "><i class="fa fa-bars" aria-hidden="true "></i></a>
+            <a class="option1" href="login.html"  style=" margin-left: 10px; " >Login</a>
+            <a class="option2" href="signup.html" style=" margin-left: 1px;"><span>Signup</span></a>
+            <a class="option3" href="mailto:nagarjunaprabhuraj16@gmail.com" style=" margin-left: 10px;"><span>Contact</span></a> 
+            <a class="option4" href="#about" ><span>About</span></a> 
+
+       </div>
+        <!-- Nav Bar End -->
+  <div class="section1" id="section1">
+
+        <div class="theme" align="center" style=" margin-top:-10px width: 100%; height: 28% ; background-size: cover;"> 
+               <h1 class="well1" style="font-family: 'Yatra One', sans-serif;">Welcome to Our Website!</h1>
+            <h1 class="well2" style="color: mintcream; font-family: 'Yatra One', sans-serif; font-size: 15px; margin-top: -22px">Open the door to comfort, joy, and the sweet melody of shared stories. Here, every welcome is a promise, and every visit is a journey into the heart of hospitality. Welcome to a haven where you're not just a guest; you're part of our story.</h1>
+        </div>
+        <!-- Welcome Note Begin -->
+        <div class="welcome-container">
+            <div class="background-triangles">
+
+                <!-- JavaScript for triangle creation will be added here -->
+            </div>
+
+         
+            <img class="web1"src="web1.png" width="350px" style="margin-top: 70px; margin-right: 70px; opacity: 0.9; margin: ;">
+            <p style="font-family: 'Lobster', sans-serif;">We are excited to have you here. Explore and enjoy our content.</p>
+            <a href="#about" class="scroll-btn" onclick="smoothScroll(event)">Get Started</a>
+
+        </div>
+        <!-- Welcome Note End -->
+
+        <!-- Section 2 Begin -->
+        <div class="section2"  class="sec2" id="section2">
+            <div class="display1" class="d1" width="50%">
+                <!-- Content for section2 goes here -->
+            </div>
+            <div class="display2" class="d2" width="50%">   
+                <!-- Content for section2 goes here -->
+            </div>
+        </div>
+        <!-- Section 2 End -->
+
+        <div class="layer1" style="background: burlywood; padding: 5px;"></div>
+        <div class="layer2" style="background: brown; padding: 5px;"></div>  
+
+        <div class="abt" class="about" id="about">
+              <div class="about-section" style="">
+        <div class="wave-text" style="">About Me</div>
+        <p style="color:white; text-align: justify;">
+            
+Welcome to Nexus Signup and Login Website, your go-to destination for utilize the new features and style. At our Nexus info, we are passionate about Web Development and committed to delivering highly stylish and dynamic web applications that exceed your expectations.
+
+Our mission is to provide a quality product, providing you with valuable benifits. Whether you're a client looking for Creative web applications, or simply seeking for styling applications, we have something for everyone.
+
+Explore our site to discover features and user interface, and join our growing community of web developers. We strive to create an engaging and informative space where you can achive making web applications.
+
+Thank you for visiting Nexus Info. We look forward to being a part of your online journey and providing you with a valuable and enjoyable experience. If you have any questions or feedback, feel free to <a href="mailto:nagarjunaprabhuraj16@gmail.com" style="text-decoration: none; color: yellow;" >Contact us </a>. Welcome aboard! Click here to <a href="login.html" style="text-decoration: none; color: yellow;" >Login</a> or new user? <a href="signup.html" style="text-decoration: none; color: yellow;" >Sign Up</a>
+</p>
+
+    </div>
+  <br>  <br>
+<p class="footer" align="center" style="">Copyright © 2024 Prabhuraj Nagarjuna and Contact us </p>
+<a class="facebook"  style=""><i class="fa fa-facebook" aria-hidden="true "></i></a>
+<a class="instagram"  style=""><i class="fa fa-instagram" aria-hidden="true "></i></a>
+<a class="Email"  style=""><i class="fa fa-envelope" aria-hidden="true "></i></a>
+<a class="linkedin"  style=""><i class="fa fa-linkedin" aria-hidden="true "></i></a>
+<a class="telegram"  style=""><i class="fa fa-telegram" aria-hidden="true "></i></a>
+        </div>
+        
+        <script>
+            function smoothScroll(event) {
+                event.preventDefault();
+
+                const targetId = event.target.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        </script>
+        <script>
+            function createTriangle() {
+                const colors = ['#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6'];
+                const triangle = document.createElement('div');
+                triangle.className = 'triangle';
+                triangle.style.borderBottomColor = colors[Math.floor(Math.random() * colors.length)];
+                document.querySelector('.background-triangles').appendChild(triangle);
+
+                const startY = Math.random() * window.innerHeight;
+
+                triangle.style.top = startY + 'px';
+
+                const scale = Math.random() * 0.8 + 0.5; // Random size (increased)
+                triangle.style.transform = `scale(${scale})`;
+
+                const animationDuration = Math.random() * 4 + 2; // Random speed (increased)
+                triangle.style.animationDuration = `${animationDuration}s`;
+
+                function removeTriangle() {
+                    document.querySelector('.background-triangles').removeChild(triangle);
+                }
+
+                setTimeout(removeTriangle, animationDuration * 1000);
+            }
+
+            // Create triangles at regular intervals
+            setInterval(createTriangle, 1500); // Adjust interval as needed
+
+     function toggleOptions() {
+         var navbar = document.querySelector('.navbar');
+         navbar.classList.toggle('show-options');
+     }
+
+    // // Close dropdown when clicking outside the navbar
+     document.addEventListener('click', function (event) {
+         var navbar = document.querySelector('.navbar');
+         if (!navbar.contains(event.target)) {
+             navbar.classList.remove('show-options');
+         }
+     });
+
+</script>
+<script>
+ 
+    // Check screen width and update "Get Started" button's href
+    window.addEventListener('DOMContentLoaded', function () {
+        const getStartedButton = document.querySelector('.scroll-btn');
+        const screenWidth = window.innerWidth;
+
+        if (screenWidth <= 800) {
+            getStartedButton.href = 'signup.html';
+            getStartedButton.onclick = null;
+        } else {
+            getStartedButton.addEventListener('click', smoothScroll);
+            getStartedButton.href = '#about';
+        }
+    });
+        </script>
+    </div>
+</body>
+</html>

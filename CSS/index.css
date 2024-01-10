@@ -231,15 +231,21 @@
         font-size: 30px;
         color: gold;
     }
- 
+    .background-triangles {
+            position: absolute;
+            width: 600px;
+            height: 100%;
+            overflow-x:hidden;
+            z-index: -1;
+        }
+
   .triangle {
-        border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-        border-bottom: 35px solid;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 25px solid;
         filter: blur(3px);
         overflow-x: hidden;
-        width: 50px;
-        animation: none;
+
     }
 
 .well1

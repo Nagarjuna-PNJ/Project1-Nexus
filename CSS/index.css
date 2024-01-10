@@ -231,7 +231,15 @@
         font-size: 30px;
         color: gold;
     }
-
+  .triangle {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 35px solid;
+        filter: blur(3px);
+        overflow-x: hidden;
+        width: 50px;
+        /*animation: none;  Disable animation for mobile screens */
+    }
 
 .well1
 {
@@ -263,7 +271,7 @@ background-image: url("../images/man.png");
   .about-section {
         padding: 35px; /* Adjust padding for a smaller screen */
         margin-left: -10px;
-        height: 300px;
+        height: 350px;
         font-size: 10px;
         width: 250px;
         padding-bottom: 25px;

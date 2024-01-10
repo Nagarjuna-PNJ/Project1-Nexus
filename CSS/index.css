@@ -333,6 +333,9 @@ background-image: url("../images/man.png");
         border-right: 20px solid transparent; /* Adjust border size for a smaller screen */
         border-bottom: 35px solid; /* Adjust border size for a smaller screen */
         filter: blur(3px); /* Adjust blur effect for a smaller screen */
+        overflow-x:hidden;
+        width:50px;
+        
     }
 
     h1 {

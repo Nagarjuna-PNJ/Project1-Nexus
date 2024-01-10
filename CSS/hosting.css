@@ -340,7 +340,7 @@ button:hover {
         font-family: 'Anton', sans-serif;
         margin-left: 50px;
     }
-
+    
     .home {
         float: left;
         font-size: 30px;
@@ -370,7 +370,24 @@ button:hover {
         color: gold;
     }
 
+         .background-triangles {
+            position: absolute;
+            width: 600px;
+            height: 100%;
+              overflow-x:hidden;
+            z-index: -1;
+        }
 
+  .triangle {
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 35px solid;
+        filter: blur(3px);
+        overflow-x: hidden;
+        
+     
+    }
+      
 .well1
 {
     font-size: 25px;
@@ -403,7 +420,7 @@ background-image: url('../images/man.png');
   .about-section {
         padding: 35px; 
         margin-left: -10px;
-        height: 300px;
+        height: 360px;
         font-size: 10px;
         width: 250px;
         padding-bottom: 80px;

@@ -231,6 +231,7 @@
         font-size: 30px;
         color: gold;
     }
+ 
   .triangle {
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
@@ -238,7 +239,7 @@
         filter: blur(3px);
         overflow-x: hidden;
         width: 50px;
-        /*animation: none;  Disable animation for mobile screens */
+        animation: none;
     }
 
 .well1

@@ -70,7 +70,7 @@
             animation-duration: 6s;
             animation-direction: alternate;
             filter: blur(4px); /* Blur effect */
-             display:none;
+         
         }
 
         @keyframes moveTriangle {
@@ -336,6 +336,7 @@ background-image: url("../images/man.png");
         filter: blur(3px); /* Adjust blur effect for a smaller screen */
         overflow-x:hidden;
         width:50px;
+        display:none;
         
     }
 
